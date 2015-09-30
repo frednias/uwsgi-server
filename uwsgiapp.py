@@ -37,7 +37,7 @@ def application(environ, start_response):
     finally:
         pass
     os.remove('/tmp/'+sid+'.out.log')
-    start_response('200 OK', [('Content-Type', 'text/html')])
+    start_response('200 OK', [('Content-Type', 'text/html; charset=UTF-8')])
     return [res.encode('utf-8')]
 
 
