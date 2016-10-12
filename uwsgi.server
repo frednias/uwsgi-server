@@ -9,12 +9,13 @@
 UWSGI_SOCKET=127.0.0.1:9001
 
 # Enable threads? (1 = yes, 0 = no). The default is 0
-#
+
 UWSGI_THREADS=0
 
 # The path to your uWSGI application.
 #
-UWSGI_PROGRAM=
+#UWSGI_PROGRAM=/var/www/brewery-simulator.com/web/index.py
+UWSGI_PROGRAM=/usr/lib64/python3.4/frcgi.py
 
 # The path to your uWSGI xml config file.
 #
@@ -26,7 +27,7 @@ UWSGI_PROCESSES=1
 
 # The log file path. If empty, log only errors
 #
-UWSGI_LOG_FILE=/var/log/uwsgi.log
+UWSGI_LOG_FILE=/var/log/nginx/uwsgi-python.log
 
 # If you want to run your application inside a chroot then specify the
 # directory here. Leave this blank otherwise.
@@ -36,7 +37,8 @@ UWSGI_CHROOT=
 # If you want to run your application from a specific directiory specify
 # it here. Leave this blank otherwise.
 #
-UWSGI_DIR=/var/www/uwsgi-server/
+#UWSGI_DIR=/var/www/brewery-simulator.com/web/
+#UWSGI_DIR=/usr/lib64/python3.4/
 
 # The user to run your application as. If you do not specify these,
 # the application will be run as user root.
@@ -59,5 +61,6 @@ UWSGI_EMPEROR_PATH=
 UWSGI_EMPEROR_GROUP=
 
 # Additional options you might want to pass to uWSGI
-#
+
 UWSGI_EXTRA_OPTIONS=
+
